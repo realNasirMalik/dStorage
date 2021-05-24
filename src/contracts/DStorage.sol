@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-contract DStorage {
+contract dStorage {
 
   // Name
   string public name = 'dStorage';
@@ -22,7 +22,7 @@ contract DStorage {
  }
 
   // Event
-  struct FileUploaded {
+  event FileUploaded (
        uint fileID,
        string fileHash,
        uint fileSize,
@@ -30,8 +30,8 @@ contract DStorage {
        string fileName,
        string fileDescription,
        uint uploadTime,
-       address payable uploader,
-}
+       address payable uploader
+);
 
 
   constructor() public {
